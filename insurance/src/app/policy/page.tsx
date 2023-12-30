@@ -1,8 +1,9 @@
 import React from 'react'
+import Policies from '../../components/MyPolicies/Policies'
 
 function page() {
   return (
-    <>Home Page</>
+    <Policies/>
   )
 }
 
