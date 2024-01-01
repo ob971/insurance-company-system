@@ -1,0 +1,136 @@
+main {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: white;
+  }
+  
+  .split-container {
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+  }
+  .left-half, .right-half {
+    flex: 1;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+  }
+  
+  .split-line {
+    width: 2px;
+    background-color: #007bff; 
+    min-height: 100%;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  .right-half p {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .claims-procedure {
+    background-color: #d9d9d9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  .claim-form-container {
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 100%;
+  }
+  
+  .claim-form {
+    text-align: center;
+    padding: 30px;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0;
+    text-align: left;
+  }
+  
+  input,
+  textarea,
+  select {
+    width: calc(100% - 16px); 
+    box-sizing: border-box;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  .form-group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .form-group input {
+    width: 300px;
+  }
+  
+  .form-group label {
+    width: 100%;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .checkbox-group label {
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkbox-group input {
+    margin-right: 5px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  .submit-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+  }
+  
+  .cancel-button {
+    background-color: #282525;
+    color: white;
+    border: none;
+  }
