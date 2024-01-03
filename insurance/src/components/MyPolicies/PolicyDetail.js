@@ -97,13 +97,13 @@ function PolicyDetail() {
 
 
         <div className='flex gap-4 w-4/5 mx-auto mt-20'>
-          <button className='bg-blue-500 rounded-xl px-5 py-2 font-bold text-white'>
+          <button className='bg-blue-500 rounded-xl px-5 py-2 font-bold text-white' onClick={() => router.push("/portal/pay")}>
             Pay Premium
           </button>
           <button className='bg-blue-500 rounded-xl px-5 py-2 font-bold text-white' onClick={changeNavigation}>
             File Claim
           </button>
-          <button className='bg-red-500 rounded-xl px-5 py-2 font-bold text-white'>
+          <button className='bg-red-500 rounded-xl px-5 py-2 font-bold text-white' onClick={() => router.push("/portal/policy/cancelPolicy")}>
             Cancel Policy
           </button>
         </div>

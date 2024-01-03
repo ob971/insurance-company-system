@@ -45,7 +45,7 @@ function Home() {
                 <img src="g2.jpg" alt="general_insurance" className="w-56 h-auto"/>
                 <div className="ml-4">
                     <p>Imagine life as a thrilling rollercoaster. General Insurance is your trusty sidekick, ensuring you land on your feet even when the ride gets bumpy. It's not just about protecting your precious belongings (car, house, gadgets, you name it!), but also guarding you against unexpected liabilities.</p>
-                    <button className="px-4 py-2 text-white bg-blue-500 rounded" onClick={() => router.push("/register")}>Schedule Appointment</button>
+                    <button className="px-4 py-2 text-white bg-blue-500 rounded mt-4" onClick={() => router.push("/register")}>Schedule Appointment</button>
                 </div>
             </div>
             <h3 className="text-xl font-bold">Life Insurance</h3>
@@ -53,7 +53,7 @@ function Home() {
                 <img src="OIP.jpg" alt="life insurance" className="w-56 h-auto"/>
                 <div className="ml-4">
                     <p>Worried about tomorrow? Let's unlock a lifetime of protection and prosperity with our tailored life and health insurance plans. Imagine financial security blooming alongside your loved ones, all wrapped in a bouquet of peace and calm. Secure Your Future and Peace of Mind</p>
-                    <button className="px-4 py-2 text-white bg-blue-500 rounded" onClick={() => router.push("/register")}>Schedule Appointment</button>
+                    <button className="px-4 py-2 text-white bg-blue-500 rounded mt-4" onClick={() => router.push("/register")}>Schedule Appointment</button>
                 </div>
             </div>
         </div>

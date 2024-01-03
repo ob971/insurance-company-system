@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 
 function PolicyType() {
   const forms = [
-      <form className='my-7 grid grid-cols-2 gap-4 mx-auto justify-center text-right'>
+      <div className='my-7 grid grid-cols-2 gap-4 mx-auto justify-center text-right'>
           <div className='flex gap-4 justify-end'>
               <label for="plate" className='font-semibold'>Plate Number :</label>
               <input type="number" id="plate" className='h-max'/>
@@ -44,8 +44,8 @@ function PolicyType() {
               <label for="Estimate" className='font-semibold'>Propser's Present Estimate Value :</label>
               <input type="number" id="Estimate" className='h-max'/>
           </div>
-      </form>,
-      <form className='my-7 grid grid-cols-2 gap-4 mx-auto justify-center text-right'>
+      </div>,
+      <div className='my-7 grid grid-cols-2 gap-4 mx-auto justify-center text-right'>
           <div className='flex gap-4 justify-end'>
               <label for="assetType" className='font-semibold'>Asset Type :</label>
               <input type="text" id="assetType" className='h-max'/>
@@ -70,8 +70,8 @@ function PolicyType() {
               <label for="value" className='font-semibold'>Proposer's Present Estimate Value :</label>
               <input type="number" id="value" className='h-max'/>
           </div>
-      </form>,
-      <form className='my-7 grid grid-cols-2 gap-4 mx-auto justify-center text-right'>
+      </div>,
+      <div className='my-7 grid grid-cols-2 gap-4 mx-auto justify-center text-right'>
           <div className='flex gap-4 justify-end'>
               <label for="insured-name" className='font-semibold'>Insured's Full Name :</label>
               <input type="text" id="insured-name" required className='w-1/2'/>
@@ -84,7 +84,7 @@ function PolicyType() {
               <label for="insured-occupation" className='font-semibold'>Insured's Occupation :</label>
               <input type="text" id="insured-occupation" required className='w-1/2'/>
           </div>
-      </form>];
+      </div>];
   const [index, setIndex] = useState(0);
   function switchForm(e) {
       let key = e.target.innerText
@@ -117,7 +117,8 @@ function PolicyType() {
     }
   let displayedForm = forms[index];
   return (
-    <div className='bg-gray-300 p-9 rounded-2xl w-4/5 mx-auto my-10'>
+    <div>
+      <div className='bg-gray-300 p-9 rounded-2xl w-4/5 mx-auto my-10'>
           <h3 className='font-bold text-lg'>Select Policy Type</h3>
           <div className='flex bg-blue-200 mt-8'>
               <button className='p-2 bg-blue-500 font-semibold text-white' onClick={switchForm}>Motor Vehicle</button>
@@ -129,6 +130,11 @@ function PolicyType() {
               Schedule an appointment
           </a>
       </div>
+      <div className="button mx-auto w-min flex gap-5 my-4">
+        <button className="submit rounded-xl px-5 py-2 font-bold bg-blue-500 w-max text-white" type="submit">Submit</button>
+        <button className="cancel rounded-xl px-5 py-2 font-bold bg-red-500 w-max text-white" type="submit">Cancel</button>
+      </div>
+  </div>
     )
 }
 

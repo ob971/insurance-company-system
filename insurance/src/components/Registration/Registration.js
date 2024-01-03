@@ -3,11 +3,11 @@ import PolicyType from './PolicyType'
 
 function Register() {
     return (
-        <main className='flex flex-col gap-7'>
+        <form className='flex flex-col gap-7'>
             <h1 className="font-bold text-4xl my-12 mx-10">Application Form</h1>
             <div className='bg-gray-300 p-9 rounded-2xl w-4/5 mx-auto'>
                 <h2 className='font-bold text-xl'>Basic information</h2>
-                <form className='my-7 grid grid-cols-2 gap-4 mx-auto justify-center'>
+                <div className='my-7 grid grid-cols-2 gap-4 mx-auto justify-center'>
                     <div className='flex gap-4 justify-end'>
                         <label for="full-name" className='font-semibold'>Full Name :</label>
                         <input type="text" id="full-name" placeholder='eg. Abebe Kebede' required className='w-1/2'/>
@@ -39,14 +39,10 @@ function Register() {
                             <label for="Female"><input type="radio" name='gender' id="Female"/> Female</label>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
             <PolicyType/>
-            <div className="button mx-auto flex gap-5 my-4">
-                <button className="submit rounded-xl px-5 py-2 font-bold bg-blue-500 w-max text-white" type="submit">Submit</button>
-                <button className="cancel rounded-xl px-5 py-2 font-bold bg-red-500 w-max text-white" type="submit">Cancel</button>
-            </div>
-        </main>
+        </form>
     )
 }
 

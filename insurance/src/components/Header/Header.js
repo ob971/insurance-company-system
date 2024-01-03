@@ -19,7 +19,7 @@ function Header() {
             <ul className="flex gap-10">
                 <li className={url.includes("policy") ? 'list-disc font-bold' : ''}><a href="/portal/policy">My Policies</a></li>
                 <li className={url.includes("claim") ? 'list-disc font-bold' : ''}><a href="/portal/claim">File Claim</a></li>
-                <li><a href="">Pay Premium</a></li>
+                <li className={url.includes("pay") ? 'list-disc font-bold' : ''}><a href="/portal/pay">Pay Premium</a></li>
                 <li><a href="">Contact Us</a></li>
                 <li><a href="">Profile</a></li>
             </ul>
@@ -29,7 +29,7 @@ function Header() {
             <a href="/#products" className="text-600 font-semibold">Products</a>
             <a href="/#about" className="text-600 font-semibold">About Us</a>
             <a href="" className="text-600 font-semibold">Contact Us</a>
-            <button className="px-4 py-2 text-white bg-blue-500 rounded" onClick={() => changeNavigation("register")}>Register</button>
+            <button className="px-4 py-2 text-white bg-blue-500 rounded font-semibold" onClick={() => changeNavigation("register")}>Register</button>
             <a href="/login" className="text-blue-500 flex gap-3 items-center font-bold">
                 <img src="account.svg" alt="profile" width="30" height="30"/>
                 Login</a>
