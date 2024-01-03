@@ -1,9 +1,9 @@
 import React from 'react'
-import ClaimForm from '../../../components/Fileclaim/ClaimForm'
+import LoginForm from '../../components/Login/Login'
 
 function page() {
   return (
-    <ClaimForm/>
+    <LoginForm/>
   )
 }
 

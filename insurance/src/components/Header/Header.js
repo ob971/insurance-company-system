@@ -1,23 +1,51 @@
+'use client'
 import React from 'react'
+import { usePathname, useRouter } from 'next/navigation'
+import './header.css'
 
 function Header() {
-  return (
-    <header className="navbar flex justify-between mx-5 px-8 py-3 items-end ">
-      <div className="flex items-end">
-          <img src="InsuranceLogo.png" alt="Insurance Logo" className="w-24"/>
-          <h1 className="font-bold text-2xl">ABC Insurance</h1>
-      </div>
-      <nav>
-          <ul className="flex gap-10">
-              <li className="list-disc font-bold"><a href="">My Policies</a></li>
-              <li><a href="">File Claim</a></li>
-              <li><a href="">Pay Premium</a></li>
-              <li><a href="">Contact Us</a></li>
-              <li><a href="">Profile</a></li>
-          </ul>
-      </nav>
-    </header>
-  )
-}
+    const router = useRouter();
+    const changeNavigation = (btn) => {
+        if (btn == "register") {
+            router.push('/register');
+        }
+    };
 
+    const url = usePathname().split("/");
+    let navbar;
+    if (url.includes("portal")) {
+        navbar = 
+        <nav>
+            <ul className="flex gap-10">
+                <li className={url.includes("policy") ? 'list-disc font-bold' : ''}><a href="/portal/policy">My Policies</a></li>
+                <li className={url.includes("claim") ? 'list-disc font-bold' : ''}><a href="/portal/claim">File Claim</a></li>
+                <li><a href="">Pay Premium</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Profile</a></li>
+            </ul>
+        </nav>
+    } else {
+        navbar = <nav className="flex items-end space-x-8">
+            <a href="/#products" className="text-600 font-semibold">Products</a>
+            <a href="/#about" className="text-600 font-semibold">About Us</a>
+            <a href="" className="text-600 font-semibold">Contact Us</a>
+            <button className="px-4 py-2 text-white bg-blue-500 rounded" onClick={() => changeNavigation("register")}>Register</button>
+            <a href="/login" className="text-blue-500 flex gap-3 items-center font-bold">
+                <img src="account.svg" alt="profile" width="30" height="30"/>
+                Login</a>
+        </nav>
+    }
+
+
+    return (
+        <header className="navbar flex justify-between mx-5 px-8 py-3 items-end ">
+        <a href='/' className='flex items-end'>
+            <img src="../../InsuranceLogo.png" alt="Insurance Logo" className="w-24"/>
+            <h1 className="font-bold text-2xl mb-0">ABC Insurance</h1>
+        </a>
+        {navbar}
+        </header>
+    )
+}
+    
 export default Header

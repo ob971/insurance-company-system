@@ -1,5 +1,5 @@
 import React from 'react'
-import FileClaim from '../../components/FileClaim/FileClaim'
+import FileClaim from '../../../components/FileClaim/FileClaim'
 
 function page() {
   return (

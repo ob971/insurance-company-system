@@ -3,7 +3,7 @@ import Home from '../components/Home/Home'
 
 function page() {
   return (
-    <>Home</>
+    <Home/>
   )
 }
 

@@ -1,0 +1,14 @@
+.slogan {
+    background-image: url("../../../public/InsHomehero.jpg");
+    background-size:cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Sans', sans-serif;
+    text-shadow: 1px 1px black;
+}
+
+html {
+    scroll-behavior: smooth;
+}

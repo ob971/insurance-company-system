@@ -1,9 +1,15 @@
+'use client'
 import React from 'react'
 import './policies.css'
+import { useRouter } from 'next/navigation';
 
-function PolicyList() {
+function PolicyList() { 
+    const router = useRouter();
+    const changeNavigation = () => {
+        router.push('policy/policydetail');
+    };
     return (
-        <main>
+        <div>
             <h1 className="font-bold text-6xl my-14 mx-10">Welcome, User</h1>
             <div className="policy-lists w-4/5 mx-auto flex flex-col gap-11 p-5">
                 <div className="policy-lists__policy flex justify-between bg-gray-300 p-8 rounded-2xl">
@@ -16,11 +22,11 @@ function PolicyList() {
                                 <p><span className="inline font-bold">Next Payment Date:</span> 02/01/2024</p>
                             </div>
                         </div>
-                        <button className='button rounded-xl p-2 font-bold'>
+                        <button className='button rounded-xl p-2 font-bold text-white' onClick={changeNavigation}>
                             Policy Details
                         </button>
                     </div>
-                    <img src='car.jpg'/>
+                    <img src='../car.jpg'/>
                 </div>
                 <div className="policy-lists__policy flex justify-between bg-gray-300 p-8 rounded-2xl">
                     <div className="policy-lists__policy__left flex flex-col justify-between items-start flex-grow">
@@ -32,11 +38,11 @@ function PolicyList() {
                                 <p><span className="inline font-bold">Next Payment Date:</span> 02/01/2024</p>
                             </div>
                         </div>
-                        <button className='button rounded-xl p-2 font-bold'>
+                        <button className='button rounded-xl p-2 font-bold text-white'onClick={changeNavigation}>
                             Policy Details
                         </button>
                     </div>
-                    <img src='car.jpg'/>
+                    <img src='../car.jpg'/>
                 </div>
                 <div className="policy-lists__policy flex justify-between bg-gray-300 p-8 rounded-2xl">
                     <div className="policy-lists__policy__left flex flex-col justify-between items-start flex-grow">
@@ -48,14 +54,18 @@ function PolicyList() {
                                 <p><span className="inline font-bold">Next Payment Date:</span> 02/01/2024</p>
                             </div>
                         </div>
-                        <button className='button rounded-xl p-2 font-bold'>
+                        <button className='button rounded-xl p-2 font-bold text-white'onClick={changeNavigation}>
                             Policy Details
                         </button>
                     </div>
-                    <img src='car.jpg'/>
+                    <img src='../car.jpg'/>
                 </div>
+                <button className='button rounded-xl py-2 px-4 font-bold text-white w-max self-end' onClick={() => router.push("/portal/policy/newPolicy")}>
+                    Add New Policy
+                </button>
             </div>
-    </main>
+            
+    </div>
     )
 }
 
