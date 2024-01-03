@@ -1,9 +1,9 @@
 import React from 'react'
-import FileClaim from '../../components/Fileclaim/FileClaim'
+import Payment from '../../components/Payments/Payment'
 
 function page() {
   return (
-    <FileClaim/>
+    <Payment/>
   )
 }
 
