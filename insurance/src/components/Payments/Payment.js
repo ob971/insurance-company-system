@@ -1,7 +1,11 @@
+'use client'
 import React from 'react'
 import "./payment.css"
+import {useRouter } from 'next/navigation'
+
 
 function Payment() {
+  const router = useRouter();
   return (
     <main>
       <h1 className='font-bold text-lg my-5 text-center'>Choose your insurance type and complete the payment securely.</h1>
@@ -14,30 +18,30 @@ function Payment() {
           <input className="box" type="text" name="policyNumber" id="policyNumber" placeholder="Enter Policy Number" required/><br />
           <label for="amount" className='font-bold'>Payment Amount</label><br />
           <input className="box" type="number" name="amount" id="amount" placeholder="Enter Amount" required/><br />
-          <h2 className='font-bold'>Select Insurance Type</h2>
+          {/* <h2 className='font-bold'>Select Insurance Type</h2>
           <div className="insurance-buttons mt-2">
             <label><input className="insurance-button" type="radio" name='insurance-type' value="Health"/>Health</label>
             <label><input className="insurance-button" type="radio" name='insurance-type' value="Car"/>Car</label>
             <label><input className="insurance-button" type="radio" name='insurance-type' value="Animal"/>Animal</label>
             <label><input className="insurance-button" type="radio" name='insurance-type' value="House"/>House</label>
             <label><input className="insurance-button" type="radio" name='insurance-type' value="Life"/>Life</label>
-          </div>
+          </div> */}
           <input className="insurance-type-input" type="hidden" name="insuranceType" id="insuranceType"/>
-          <h2 className='font-bold mt-4'>Select Payment Frequency</h2>
+          {/* <h2 className='font-bold'>Select Payment Frequency</h2>
           <select className="box" id="paymentFrequency" name="paymentFrequency">
             <option value="monthly">Monthly</option>
-            <option value="yearly">Yearly</option></select><br />
+            <option value="yearly">Yearly</option></select><br /> */}
           <label for="automaticDeduction" className='font-semibold'>Automatic Deduction for Civil Servants</label><br />
           <input type="checkbox" id="automaticDeduction" name="automaticDeduction"/>
           <label for="automaticDeduction">Enable automatic deduction from salary</label><br />
           <div className='flex gap-x-4 gap-y-2 flex-wrap my-4'>
             <h2 className='w-full font-bold'>Select Payment Method</h2>
-            <button className="bg-blue-500 font-semibold text-white py-2 px-4 hover:bg-blue-600 rounded-md">Pay Now</button>
-            <a href="/portal/pay/paymentinfo" className="bg-blue-500 font-semibold text-white py-2 px-4 hover:bg-blue-600 rounded-md">Payment by Transfer</a>
+            <button className="bg-blue-500 font-semibold text-white py-2 px-4 hover:bg-blue-600 rounded-md" onClick={()=>{router.push('/portal/pay/paymentinfo')}}>Pay Now</button>
+            <button href="" className="bg-blue-500 font-semibold text-white py-2 px-4 hover:bg-blue-600 rounded-md">Payment by Transfer</button>
             <a href='/portal/policy' className="bg-red-500 font-semibold text-white py-2 px-4 hover:bg-red-600 rounded-md cursor-pointer">Cancel</a>
           </div>
       </form>
-      <section className="payment-details">
+      {/*<section className="payment-details">
         <h2>Payment Details</h2>
       </section>
       <section className="payment-summary">
@@ -61,7 +65,7 @@ function Payment() {
           <span className="payment-summary-name">Automatic Deduction</span>
           <span className="payment-summary-price" id="automaticDeductionSummary">Not specified</span>
         </div>
-      </section>
+      </section> */}
     </main>
   )
 }

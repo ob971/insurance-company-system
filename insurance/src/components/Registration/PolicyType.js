@@ -121,9 +121,9 @@ function PolicyType() {
       <div className='bg-gray-300 p-9 rounded-2xl w-4/5 mx-auto my-10'>
           <h3 className='font-bold text-lg'>Select Policy Type</h3>
           <div className='flex bg-blue-200 mt-8'>
-              <button className='p-2 bg-blue-500 font-semibold text-white' onClick={switchForm}>Motor Vehicle</button>
-              <button className='p-2' onClick={switchForm}>Fixed Asset</button>
-              <button className='p-2' onClick={switchForm}>Life Insurance</button>
+              <div className='cursor-pointer p-2 bg-blue-500 font-semibold text-white' onClick={switchForm}>Motor Vehicle</div>
+              <div className='p-2 cursor-pointer' onClick={switchForm}>Fixed Asset</div>
+              <div className='p-2 cursor-pointer' onClick={switchForm}>Life Insurance</div>
           </div>
           {displayedForm}
           <a href='https://calendly.com/abenezerseifu123/physical-inspection' target="_blank" className='rounded-xl p-2 font-bold bg-blue-500 w-max mx-auto block text-white'>
