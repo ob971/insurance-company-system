@@ -9,7 +9,7 @@ function PolicyDetail() {
   let captions = ["Policy Type","Policy Purchase Date","Annual Premium","Next Payment Date","Plate No.", "Chassis No.","Engine No.","Make of Vehicle","Type of Body","Horse Power of Cylinder Capacity CC","Year of Manufactured","Carrying Capacity including driver","Year Purchased","Purchased Price","Present Estimate Value"]
   let values = ["Motor Vehicle","6/6/2021","10,000 ETB","2/2/2024","4-HR-1230","SV30-0169266","PJ12345U123456P","Toyota","SUV","301","2020","6","2021","3,000,000 ETB","2,000,000 ETB"]
   let properties = []
-  for (let i = 0; i < captions.length; i++) {
+  for (let i = 0; i < 4; i++) {
     properties.push(<Row caption={captions[i]} value={values[i]} r={i}/>)    
   }
 
@@ -61,8 +61,13 @@ function PolicyDetail() {
           {properties}
         </table>
 
+        <div className='my-10'>
+            <h2 className='text-center text-2xl font-semibold underline'>Policy Contract and Details</h2>
+            <iframe className='mx-auto my-8 w-3/5' src="https://drive.google.com/file/d/1_kWY50jpKbs9YFGmHuQKfvbmET6b-pAA/preview" width="800" height="700"></iframe>
+        </div>
+
         <div className='w-4/5 mx-auto my-10'>
-          <h2 className='font-bold text-xl bg-gray-200 p-2 rounded-sm cursor-pointer' onClick={() => showTable("payment")}>Payment History</h2>
+          <h2 className='font-bold text-xl bg-gray-200 p-2 rounded-lg cursor-pointer' onClick={() => showTable("payment")}>Payment History</h2>
           {paymentsState &&
           <table className='w-full'>
             <tr className='border-b-4 border-blue-500'>
@@ -78,7 +83,7 @@ function PolicyDetail() {
         </div>
 
         <div className='w-4/5 mx-auto my-10'>
-          <h2 className='font-bold text-xl bg-gray-200 p-2 rounded-sm cursor-pointer' onClick={() => showTable("claim")}>Claims History</h2>
+          <h2 className='font-bold text-xl bg-gray-200 p-2 rounded-lg cursor-pointer' onClick={() => showTable("claim")}>Claims History</h2>
           {claimState &&
           <table className='w-full'>
             <tr className='border-b-4 border-blue-500'>
