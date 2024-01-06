@@ -20,4 +20,5 @@ export async function POST(req , res){
    await Claim.save();
    console.log(Claim);
    return NextResponse.json(Claim);
+   
    }
