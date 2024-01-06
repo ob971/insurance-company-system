@@ -1,14 +1,6 @@
 import mongoose from "mongoose";
-//  Claim ID
-//  Claim Type
-//  Claim Status
-//  Claim Amount
-//  Policy holder
-//  Payment date
-//  Payment amount
-//  Claim date
-//  Transaction ID
 const Claim = mongoose.Schema({
+    userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
     ClaimType: { type: String, required: true },
     ClaimStatus: { type: String, required: true },
     ClaimAmount: { type: String, required: true },
