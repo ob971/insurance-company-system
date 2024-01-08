@@ -21,7 +21,7 @@ function Header() {
                 <li className={url.includes("claim") ? 'list-disc font-bold' : ''}><a href="/portal/claim" className='text-black'>File Claim</a></li>
                 <li className={url.includes("pay") ? 'list-disc font-bold' : ''}><a href="/portal/pay" className='text-black'>Pay Premium</a></li>
                 <li className={url.includes("contact") ? 'list-disc font-bold' : ''}><a href="/portal/contact" className='text-black'>Contact Us</a></li>
-                <li><a href="" className='text-black'>Profile</a></li>
+                <li className={url.includes("profile") ? 'list-disc font-bold' : ''}><a href="/portal/profile" className='text-black'>Profile</a></li>
             </ul>
         </nav>
     } else {
